@@ -99,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 goToStep('step-gift', 'step-reveal');
                 // Reinicia el video (por si alguien vuelve con reload rápido)
                 if (video) {
+                    video.muted = true;
+                    video.volume = 0;
                     video.currentTime = 0;
                     video.play().catch(() => {});
                 }
