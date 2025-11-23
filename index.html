@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Sorpresa Especial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Step 1: Welcome -->
+        <section id="step-welcome" class="step active">
+            <div class="content">
+                <div class="photo-frame floating">
+                    <!-- User should replace this src with their own photo -->
+                    <img src="primerafoto.jpeg" alt="Nosotros" class="couple-photo">
+                </div>
+                <h1>Hola Familia 👋</h1>
+                <p>Tenemos algo muy especial que queremos compartir con ustedes...</p>
+                <button class="btn-primary" id="btn-start">Comenzar</button>
+            </div>
+        </section>
+
+        <!-- Step 2: Suspense -->
+        <section id="step-suspense" class="step hidden">
+            <div class="content">
+                <div class="photo-frame floating-delayed">
+                    <!-- User should replace this src with their own photo -->
+                    <img src="anionvo.jpeg" alt="Momentos" class="couple-photo">
+                </div>
+                <h2>¿Están listos?</h2>
+                <p>Prepárense... porque estamos a punto de empezar una nueva aventura 🙈</p>
+                <button class="btn-primary" id="btn-ready">¡Sí, estamos listos!</button>
+            </div>
+        </section>
+
+        <!-- Step 3: The Gift -->
+        <section id="step-gift" class="step hidden">
+            <div class="content">
+                <h2>Pero antes... tenemos un presente para ustedes</h2>
+                <p>Toquen el regalo para descubrir la sorpresa.</p>
+                <div class="gift-box-container" id="gift-box">
+                    <div class="gift-box">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body"></div>
+                        <div class="gift-bow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4: Reveal -->
+        <section id="step-reveal" class="step hidden">
+            <div class="content">
+                <h1 class="reveal-title">¡Vamos a ser Papás!</h1>
+                <div class="video-wrapper">
+                    <!-- Placeholder for the ultrasound video -->
+                    <div class="video-placeholder">
+                        <!-- Uncomment and add source when video is available -->
+                        <video controls autoplay muted loop id="ultrasound-video">
+                            <source src="ecografia.mp4" type="video/mp4">
+                            Tu navegador no soporta videos.
+                        </video>
+                    </div>
+                </div>
+                <p class="baby-coming">👶🏻Nos vemos en Junio 2026🎉✨🎊</p>
+                <button class="btn-secondary" id="btn-replay">Ver otra vez</button>
+            </div>
+        </section>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
