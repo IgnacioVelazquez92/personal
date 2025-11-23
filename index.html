@@ -41,8 +41,14 @@
         <section id="step-gift" class="step hidden">
             <div class="content">
                 <h2>Pero antes... tenemos un presente para ustedes</h2>
-                <p>Toquen el regalo para descubrir la sorpresa.</p>
-                <div class="gift-box-container" id="gift-box">
+                <p>Toquen el regalo (o presionen Enter) para descubrir la sorpresa.</p>
+                <div 
+                    class="gift-box-container" 
+                    id="gift-box"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Abrir el regalo para ver la sorpresa"
+                >
                     <div class="gift-box">
                         <div class="gift-lid"></div>
                         <div class="gift-body"></div>
@@ -51,6 +57,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Step 4: Reveal -->
         <section id="step-reveal" class="step hidden">
